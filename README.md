@@ -5,7 +5,7 @@ Aplikasi simple Web CRUD
 ### Teknologi yang digunakan :
 * Spring 4.1.3
 * Spring Data JPA 1.7.1
-* Hibernate 4.3.7
+* Hibernate 4.3.7 (JPA 2.1)
 * Velocity 1.7
 
 ### Running Project
