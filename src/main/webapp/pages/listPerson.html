@@ -1,0 +1,58 @@
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+  	<title>Belajar SpringMVC Velocity</title>
+
+    <link href="../resources/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="../resources/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+  </head>
+  <body>
+
+
+
+    <div class="container">
+      
+      <h1>Person Management</h1>
+      <hr>      
+      <h4><b>List Person</b></h4>
+      <hr>
+      #if($personList.size() != 0)
+        <a href="addPerson"><button class="btn btn-primary"><span class="fa fa-user"></span> Add Person</button></a>
+        <p></p>
+
+        <table class="table table-bordered table-hover table-striped">
+        <th>Id</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Age</th>
+        <th>Operation</th>
+        #foreach($person in $personList)
+          <tr>
+            <td>$!person.id</td>
+            <td>$!person.nama</td>
+            <td>$!person.alamat</td>
+            <td>$!person.umur</td>
+            <td><a href="edit?id=$person.id"><span class="fa fa-edit fa-lg"></span></a> <a href="delete?id=$person.id"><span class="fa fa-remove fa-lg"></span></a></td>
+          </tr>
+        #end
+        </table>
+
+        <p>
+          <b>Person Count : $personList.size()</b>
+        </p>        
+      #else
+        <center><h3>There is no person listed</h3>
+          <a href="addPerson"><button class="btn btn-success"><span class="fa fa-user"></span> Add Person</button></a>
+        </center>
+      #end
+    </div>
+
+    <script type="text/javascript" src="resources/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<html>
+  <head>
+
+  	<title>Belajar SpringMVC Velocity</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="../resources/css/bootstrap.css" type="text/css" rel="stylesheet">
+    <link href="../resources/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+
+  </head>
+  <body>
+    <div class="container">
+
+      <h1>Person Management</h1>
+      <hr>
+      <div class="row">
+        <div class="col-xs-6 col-sm-6"><h4><b>Add Person</b></h4></div>
+        <div class="col-xs-6 col-md-4">
+          <a href="listPerson"><button class="btn btn-default"><span class="fa fa-list fa-lg"></span> List Person</button></a>
+        </div>
+      </div>        
+      <hr>      
+      <form name="person" method="POST" class="form-horizontal">
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="nm">Nama : </label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="nm" name="nama" value="$!person.Nama" placeholder="Masukan Nama Disini" reqiured="required">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="al">Alamat : </label>
+          <div class="col-sm-6">
+            <input type="text" class="form-control" id="al" name="alamat" value="$!person.Alamat" placeholder="Masukan Alamat Disini">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-sm-2 control-label" for="um">Umur : </label>
+          <div class="col-sm-6">
+            <input type="number" class="form-control" id="um" name="umur" value="$!person.Umur" placeholder="Masukan Umur Disini">
+          </div>
+        </div>                
+        <div class="form-group">        
+          <div class="col-sm-offset-2 col-sm-2">
+            <button type="submit" class="btn btn-primary"><span class="fa fa-plus fa-lg"></span> Tambah</button>
+          </div>                     
+        </div>               
+      </form>
+        
+    </div>
+
+    <script type="text/javascript" src="../resources/js/bootstrap.min.js"></script>
+
+
+  </body>
+</html>
